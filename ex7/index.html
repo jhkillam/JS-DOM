@@ -3,12 +3,12 @@
 <head>
     <title>Exercise 7</title>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 <body>
     <div id="accordion">
-        <h3 id="section-header">Section 1</h3>
-        <div id="section">
+        <h3 href="#section" data-toggle="collapse" id="sectionHeader">Section 1</h3>
+        <div class="collapse in" id="section">
             <p>
                 Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
                 ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
@@ -17,5 +17,8 @@
             </p>
         </div>
     </div>
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </body>
 </html>
