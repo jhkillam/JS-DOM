@@ -13,4 +13,11 @@ buttonEl.addEventListener('click', function() {
     var newItemEl = document.createElement("li")
     document.getElementById("todo-list").appendChild(newItemEl)
     newItemEl.innerHTML = userInputEl
+
+})
+
+document.getElementById("todo-list").addEventListener("click", function(e){
+    // var liEl = document.querySelectorAll("li")
+    // console.dir(liEl)   
+    e.target.style.textDecoration = "line-through";
 })
