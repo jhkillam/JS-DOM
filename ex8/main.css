@@ -5,3 +5,15 @@
 #description, #search, #todo-list {
     font-size: 1.5em;
 }
+
+body {
+    background-color: rgb(191, 191, 191)
+}
+
+.toDoItem {
+    font-weight: bold;
+}
+
+.doneItem {
+    text-decoration: line-through;
+}

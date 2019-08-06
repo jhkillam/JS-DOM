@@ -9,15 +9,31 @@
 var buttonEl = document.getElementById("add-button")
 
 buttonEl.addEventListener('click', function() {
-    var userInputEl = document.getElementById("description").value
-    var newItemEl = document.createElement("li")
-    document.getElementById("todo-list").appendChild(newItemEl)
-    newItemEl.innerHTML = userInputEl
-
+    var userInputEl = document.getElementById("description").value;
+    var newItemEl = document.createElement("li");
+    document.getElementById("todo-list").appendChild(newItemEl);
+    newItemEl.innerHTML = userInputEl;
+    newItemEl.classList.add("toDoItem");
+    var deleteEl = document.createElement("button");
+    deleteEl.innerHTML = "Delete Task";
+    newItemEl.appendChild(deleteEl);
 })
+
+// document.getElementById("todo-list").addEventListener("click", function(e){
+//     e.target.style.textDecoration = "line-through";
+// })
 
 document.getElementById("todo-list").addEventListener("click", function(e){
-    // var liEl = document.querySelectorAll("li")
-    // console.dir(liEl)   
-    e.target.style.textDecoration = "line-through";
+ 
+    if (e.target.classList.contains("toDoItem")){
+        e.target.classList.remove("toDoItem");
+        e.target.classList.add("doneItem");
+    }
+    else if (e.target.classList.contains("doneItem")){
+        e.target.classList.remove("doneItem");
+        e.target.classList.add("toDoItem");
+    }
+
+    console.log(e.target.classList)
 })
+
