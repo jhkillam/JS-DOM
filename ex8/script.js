@@ -6,7 +6,7 @@
     SUPER BONUS) Make each task editable
 */
 
-var buttonEl = document.getElementById("add-button")
+var buttonEl = document.getElementById("add-button");
 
 buttonEl.addEventListener('click', function() {
     var userInputEl = document.getElementById("description").value;
@@ -17,6 +17,8 @@ buttonEl.addEventListener('click', function() {
     var deleteEl = document.createElement("button");
     deleteEl.innerHTML = "Delete Task";
     newItemEl.appendChild(deleteEl);
+    deleteEl.classList.add("deleteTaskButton");
+
 })
 
 // document.getElementById("todo-list").addEventListener("click", function(e){
@@ -33,7 +35,7 @@ document.getElementById("todo-list").addEventListener("click", function(e){
         e.target.classList.remove("doneItem");
         e.target.classList.add("toDoItem");
     }
-
-    console.log(e.target.classList)
 })
+
+
 

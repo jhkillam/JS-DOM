@@ -17,3 +17,11 @@ body {
 .doneItem {
     text-decoration: line-through;
 }
+
+button {
+    margin-left: 10px;
+}
+
+.deleteTaskButton { 
+    color: red;
+}
